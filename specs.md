@@ -56,6 +56,24 @@ Isso é uma ideia excelente! Criar uma aplicação para ajudar sua namorada a se
         Crie a estrutura básica do projeto.
         Desenvolvimento do Backend:
 
+## Entidades (Models)
+
+    models/Disciplina
+        nome
+
+    models/Nota
+        disciplina <- Disciplina.nome (required: true | mongoose.Schema.Types.ObjectId )
+        valor ( type: Number | required: true )
+        data ( type: Date | required: true )
+
+    models/Prova
+        disciplina <- Disciplina.nome (required: true | mongoose.Schema.Types.ObjectId )
+        data ( type: Date | required: true )
+        conteudo ( type: String | required: true )
+        peso ( type: Number | required: true )
+
+        
+
         Crie as rotas para cadastro de matérias, notas e provas.
         Implemente a lógica de cálculo das médias e a situação das matérias.
 ## Desenvolvimento do Frontend:
